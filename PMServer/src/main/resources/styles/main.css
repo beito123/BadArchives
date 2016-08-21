@@ -1,0 +1,233 @@
+/* 
+    Flat B
+*/
+
+.root{
+	-base-color: #FAFAFA;
+}
+
+/* MainPane */
+.mainpane{
+	-fx-background-color: -base-color;
+}
+
+/* TabPane */
+.tab{
+    -fx-background-color: derive(-base-color, -1.5%);
+    -fx-background-radius: 0;
+}
+.tab-pane{
+    -fx-background-color: derive(-base-color, 0.3%);
+    -fx-tab-min-width: 55;
+    -fx-border-color: #9E9E9E;
+}
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #9E9E9E;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.tab:selected{
+    -fx-background-color: derive(-base-color, 20%);
+    -fx-border-color: #9E9E9E #9E9E9E derive(-base-color, 0.3%) #9E9E9E;
+}
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #4CAF50;
+    -fx-background-color: derive(-base-color, 10%);
+}
+.tab:hover .tab-label{ 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #4CAF50;
+    -fx-background-color: -base-color;
+}
+.tab-pane *.tab-header-background {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, derive(-base-color, -1.5%);
+}
+.tab-pane *.tab-header-area{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* SPButton */
+.sp-button{
+    -fx-background-color: derive(-base-color, -2.3%);
+    -fx-background-radius: 0;
+    -fx-border-color: derive(-base-color, -51%);
+    -fx-font-size: 12px;
+    -fx-padding: 1px 0px;
+}
+.sp-button:hover{
+    -fx-background-color: derive(-base-color, -7%);
+    -fx-border-color: derive(-base-color, -40%);
+}
+.sp-button:armed{
+    -fx-background-color: derive(-base-color, -15%);
+    -fx-border-color: derive(-base-color, -50%);
+}
+
+/* SPButton - info */ /*todo*/
+.sp-button2{
+	-fx-background-color: #FAFAFA;
+	-fx-border-color: #757575;
+}
+.sp-button2:hover{
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #B3B3B3;
+}
+.sp-button2:armed{
+    -fx-background-color: #DADADA;
+    -fx-border-color: #9E9E9E;
+}
+
+/* Image Button */
+.image-button{
+    -fx-background-color: -base-color;
+    -fx-content-display: top;
+    -fx-padding: 0px 0px;
+    /*-fx-border-color: #BDBDBD;*/
+}
+.image-button:hover{
+    -fx-background-color: derive(-base-color, -3.2%);
+    -fx-border-color: derive(-base-color, -10%);
+}
+.image-button:armed{
+    -fx-background-color: derive(-base-color, -7.8%);
+    -fx-border-color: derive(-base-color, -15.5%);
+}
+
+
+/* Image Button Mini */
+.image-button-mini{
+    -fx-background-color: -base-color;
+    -fx-content-display: left;
+    -fx-padding: 0px 0px;
+}
+.image-button-mini:hover{
+    -fx-background-color: derive(-base-color, -3.2%);
+    -fx-border-color: derive(-base-color, -15%);
+}
+.image-button-mini:armed{
+    -fx-background-color: derive(-base-color, -7.8%);
+    -fx-border-color: derive(-base-color, -18%);
+}
+.image-button-mini:selected{
+    -fx-background-color: derive(-base-color, -5%);
+    -fx-border-color: derive(-base-color, -13%);
+}
+
+/* Label */
+.back-label{
+    -fx-text-fill: #9E9E9E;
+}
+
+/* Text Field */
+.text-field{
+    -fx-padding: 1px 0px;
+    /*-fx-display-caret: #000000;*/
+}
+
+/* ... */
+.text-area .content{
+	-fx-background-color: derive(-base-color, 50%);
+}
+.text-area, .text-field, .box, .mark{
+    -fx-background-radius: 0;
+}
+.list-view{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: #BDBDBD;
+}
+/* Chack Box */
+
+.check-box{
+    -fx-focus-color: #FFFFFF;
+}
+.box{
+	-fx-background-color: #FFFFFF;
+    -fx-border-color: #9E9E9E;
+    -fx-padding: 1px 1px;
+}
+.check-box:hover .box{
+    -fx-background-color: #EFEFEF;
+}
+.check-box .mark{
+    -fx-shape: "M0,4H2L3,6L6,0H8L4,8H2Z";
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* Scroll Pane */
+.scroll-pane{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Scroll Bar ref.https://farrukhobaid.wordpress.com/ */
+.scroll-bar{
+ -fx-background-color: #EFEFEF;
+ -fx-border-color: #EAEAEA;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+ -fx-background-color: transparent;
+}
+.scroll-bar:vertical .track-background,
+.scroll-bar:horizontal .track-background {
+ -fx-background-color: transparent;
+}
+.scroll-bar .thumb{
+ -fx-background-color: #CACACA;
+ -fx-background-radius: 0em;
+}
+.scroll-bar:horizontal .thumb {
+ -fx-background-insets: 0 1.2 0 1.2;
+}
+.scroll-bar:vertical .thumb {
+ -fx-background-insets: 0 1.2 0 1.2;
+}
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+ -fx-background-color: #BABABA;
+}
+.scroll-bar:horizontal .thumb:pressed,
+.scroll-bar:vertical .thumb:pressed {
+ -fx-background-color: #ABABAB;
+}
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button,
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+ -fx-background-color:transparent;
+ -fx-background-radius: 0em;
+ -fx-padding: 5;
+}
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+ -fx-background-color: #858585;
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-padding: 0.25em;
+}
+.scroll-bar:horizontal .increment-arrow {
+ -fx-rotate: -90;
+}
+.scroll-bar:vertical .increment-arrow {
+ -fx-rotate: 0;
+}
+.scroll-bar:horizontal .decrement-arrow {
+ -fx-rotate: 90;
+}
+.scroll-bar:vertical .decrement-arrow {
+ -fx-rotate: -180;
+}
+.scroll-bar:vertical:focused,
+.scroll-bar:horizontal:focused {
+ -fx-background-color: transparent, #EFEFEF, #EFEFEF;
+}
+
+/* comboBox */
+.combo-box{
+    -fx-background-color: #EFEFEF;
+    -fx-border-color: #DADADA;
+    -fx-background-radius: 0em;
+    -fx-font-size: 12px;
+}

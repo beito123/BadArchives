@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="371.0" styleClass="mainpane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beito.PMServer.controllers.BanListController">
+   <children>
+      <ListView fx:id="livBanList" layoutX="14.0" layoutY="33.0" prefHeight="199.0" prefWidth="282.0" />
+      <Label fx:id="labCount" layoutX="14.0" layoutY="237.0" text="合計 0 件" />
+      <Button fx:id="btnAdd" layoutX="301.0" layoutY="33.0" mnemonicParsing="false" onAction="#onAddButton" prefHeight="27.0" prefWidth="61.0" styleClass="sp-button2" text="追加" />
+      <Button fx:id="btnDel" layoutX="301.0" layoutY="68.0" mnemonicParsing="false" onAction="#onDelButton" prefHeight="27.0" prefWidth="61.0" styleClass="sp-button2" text="削除" />
+      <HBox layoutX="14.0" layoutY="8.0" prefHeight="19.0" prefWidth="347.0" spacing="4.0">
+         <children>
+            <ImageView fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/search.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="1.0" top="2.0" />
+               </HBox.margin>
+            </ImageView>
+            <TextField fx:id="fidSearch" onAction="#onSearchInputFieldChange" prefHeight="19.0" prefWidth="261.0" />
+            <ComboBox fx:id="cmbSort" onAction="#onSortChange" prefHeight="21.0" prefWidth="61.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ComboBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

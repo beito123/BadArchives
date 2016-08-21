@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beito.PMServer.controllers.MainWindowController">
+   <children>
+      <Pane prefHeight="346.0" prefWidth="600.0" styleClass="mainpane">
+         <children>
+            <TabPane prefHeight="125.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="操作">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="598.0">
+                           <children>
+                              <Button fx:id="btnStart" layoutX="8.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="開始">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/start.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnStop" layoutX="68.0" layoutY="5.0" mnemonicParsing="false" onAction="#onStopButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="停止">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/stop.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnRestart" layoutX="128.0" layoutY="5.0" mnemonicParsing="false" onAction="#onRestartButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="再起動">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/restart.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnFstop" layoutX="188.0" layoutY="5.0" mnemonicParsing="false" onAction="#onFstopButtonClick" prefHeight="63.0" prefWidth="64.0" styleClass="image-button" text="強制停止">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/fstop.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Separator layoutX="333.0" layoutY="6.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="7.0" />
+                              <Button fx:id="btnInfo" layoutX="406.0" layoutY="5.0" mnemonicParsing="false" onAction="#onInfoButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="情報">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/info.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnSetting" layoutX="346.0" layoutY="5.0" mnemonicParsing="false" onAction="#onSettingButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="設定">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/setting.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnClose" layoutX="466.0" layoutY="5.0" mnemonicParsing="false" onAction="#onCloseButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="終了">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnSave" layoutX="252.0" layoutY="5.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="63.0" prefWidth="60.0" styleClass="image-button" text="保存">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/save.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="126.0" layoutY="70.0" styleClass="back-label" text="サーバー操作" />
+                              <Label layoutX="424.0" layoutY="70.0" styleClass="back-label" text="設定" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="コマンド">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                  <Tab text=" 許可リスト ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="100.0" layoutY="70.0" styleClass="back-label" />
+                              <Label layoutX="59.0" layoutY="72.0" styleClass="back-label" text="拒否" />
+                              <Separator layoutX="140.0" layoutY="7.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="21.0" />
+                              <Button fx:id="btnStart1" layoutX="8.0" layoutY="5.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="63.0" styleClass="image-button" text="プレーヤー名">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/banlist.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnStart11" layoutX="77.0" layoutY="5.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="63.0" styleClass="image-button" text="IPアドレス">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/banlist-ip.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnStart111" layoutX="161.0" layoutY="5.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="63.0" styleClass="image-button" text="プレーヤー名">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/whitelist.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="212.0" layoutY="70.0" styleClass="back-label" text="許可" />
+                              <Separator layoutX="338.0" layoutY="7.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="21.0" />
+                              <ToggleButton layoutX="236.0" layoutY="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="102.0" styleClass="image-button-mini" text="ホワイトリスト制">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/whitelist-mode.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton layoutX="236.0" layoutY="40.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="102.0" styleClass="image-button-mini" text="  ランダム抽出 ">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/random.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="ツール">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Pane layoutY="315.0" prefHeight="30.0" prefWidth="426.0">
+               <children>
+                  <CheckBox fx:id="chkSay" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" text="say" />
+                  <TextField fx:id="fidCmd" layoutX="53.0" layoutY="7.0" onAction="#onSendCommand" prefHeight="19.0" prefWidth="326.0" />
+                  <Button fx:id="btnCmdSend" layoutX="384.0" layoutY="7.0" mnemonicParsing="false" onAction="#onSendCommand" prefHeight="17.0" prefWidth="42.0" styleClass="sp-button" text="送信" />
+               </children>
+            </Pane>
+            <Pane fx:id="consolePane" layoutY="125.0" prefHeight="192.0" prefWidth="426.0">
+               <children>
+                  <ListView fx:id="consoleList" editable="true" prefHeight="192.0" prefWidth="426.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

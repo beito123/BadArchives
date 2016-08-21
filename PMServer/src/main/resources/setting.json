@@ -1,0 +1,12 @@
+{
+  "version" : 1.0,
+  "setting" : {
+    "launch" : {
+      "PMPath" : "",
+      "PharPath" : "",
+      "PHPPath" : "",
+      "IsUseSrc" : false,
+      "SrcPath" : ""
+    }
+  }
+}

@@ -1,0 +1,27 @@
+/*
+	Setting-server
+*/
+
+.root{
+	-base-color: #FDFDFD;
+}
+
+/* MainPane */
+.mainpane{
+	-fx-background-color: -base-color;
+}
+
+.button{
+	-fx-background-color: #FAFAFA;
+	-fx-border-color: #757575;
+	-fx-padding: 2px 2px;
+	-fx-font-size: 12px;
+}
+.button:hover{
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #B3B3B3;
+}
+.button:armed{
+    -fx-background-color: #DADADA;
+    -fx-border-color: #9E9E9E;
+}

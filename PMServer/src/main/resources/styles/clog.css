@@ -1,0 +1,39 @@
+/*
+	clog
+*/
+
+.root{
+	-base-color: #000000;
+}
+
+.list-cell .list-cell:even{
+	-fx-background-color: #FFFFFF;
+}
+
+.list-cell .list-cell:odd{
+	-fx-background-color: #FAFAFA;
+}
+
+.list-cell:filled{
+	-fx-background-color: derive(-base-color, 20%);
+}
+
+.list-cell:selected{
+	-fx-background-color: derive(-base-color, 7%);
+	-fx-border-color: #039ED3;
+	-fx-border-width: 1.6px;
+	-fx-padding: 1px 5.4px;
+	-fx-box-shadow: #039ED322;
+	-fx-effect: innershadow(three-pass-box, #039ED322, 1.9, 1, 2, 1);
+}
+
+.text{
+	-fx-background-color: derive(-base-color, 18%);
+	-fx-border-color: derive(-base-color, 18%);
+	-fx-text-fill: derive(-base-color, -88%);
+}
+.list-cell:selected .text{
+	-fx-background-color: derive(-base-color, 17.5%);
+	-fx-border-color: derive(-base-color, 17.5%);
+	-fx-text-fill: derive(-base-color, -86%);
+}

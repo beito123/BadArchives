@@ -1,0 +1,41 @@
+//ref.http://www.bunkei-programmer.net/entry/2013/06/24/231615
+
+apply plugin: 'application'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+version = '1.0'
+
+mainClassName = 'beito.PMServer.MainWindow'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.4'
+}
+
+jar {
+    copy {
+        from configurations.compile
+        into 'build/dist/lib'
+    }
+    def manifestClasspath = configurations.compile.collect { 'lib/' + it.getName() }.join(' ')
+    manifest {
+        attributes 'Main-Class': 'beito.PMServer.MainWindow'
+        attributes 'Class-Path': manifestClasspath
+    }
+    from(configurations.compile.resolve().collect { it.isDirectory() ? it : fileTree(it) }) {
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/*.SF'
+        exclude 'META-INF/*.DSA'
+        exclude 'META-INF/*.RSA'
+        exclude '**/*.jar'
+    }
+    destinationDir = file('build/dist')
+}
